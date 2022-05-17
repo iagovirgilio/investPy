@@ -10,7 +10,7 @@ def cotacao(request):
         response_json = response.json()
 
         for index in response_json['rates']:
-            if index == 'EUR' or index == 'USD' or index == 'BRL':
+            if index == 'EUR' or index == 'JPY' or index == 'BRL':
 
                 cotacao = Cotacao.objects.filter(moeda=index).first()
 
