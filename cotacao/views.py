@@ -14,7 +14,7 @@ def cotacao(request):
             response_json = response.json()
 
             for index in response_json['rates']:
-                if index == 'EUR' or index == 'JPY' or index == 'BRL':
+                if index == 'USD' or index == 'EUR' or index == 'JPY' or index == 'BRL':
                     cotacao = Cotacao(moeda=index, valor=response_json['rates'][index], data=data_parametro)
                     cotacao.save()
             dias += 1
