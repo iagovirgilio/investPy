@@ -23,7 +23,7 @@ def cotacao(request):
 
         cotacao_list = Cotacao.objects.all()
         print('-' * 100)
-        print(cotacao_list, )
+        print(cotacao_list)
         print('-' * 100)
 
     return render(request, 'cotacao.html')
